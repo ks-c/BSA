@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指定@回答模式 - 多AI协作头脑风暴</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 左侧AI配置面板 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>AI 配置</h2>
+                <div class="subtitle">点击展开配置详情</div>
+            </div>
+            <div class="sidebar-content">
+                <div id="agentPanel"></div>
+            </div>
+        </aside>
+
+        <!-- 右侧聊天区域 -->
+        <main class="main-content">
+            <header class="chat-header">
+                <div>
+                    <h1>@ 指定回答模式</h1>
+                </div>
+                <div class="header-info">
+                    <span id="activeAgentCount">活跃AI: 0</span>
+                    <a href="index.html" class="btn btn-secondary btn-small">← 返回主页</a>
+                    <button class="btn btn-secondary btn-small" onclick="window.UIModule.clearAllMessages()">清空对话</button>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div id="messageList" class="message-list"></div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="输入你的问题，使用 @AI名称 指定特定AI回答。例如：@项目总监 请评估这个方案..."
+                        rows="3"
+                    ></textarea>
+                    <div class="input-actions">
+                        <button id="stopBtn" class="btn btn-danger" disabled onclick="window.UIModule.abortGeneration()">停止生成</button>
+                        <button id="sendBtn" class="btn btn-primary" onclick="handleSend()">发送</button>
+                    </div>
+                </div>
+                <div class="input-hint">
+                    提示：Enter 发送，Shift+Enter 换行 | 使用 @AI名称 指定AI | AI回复中@其他AI可触发连锁反应
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 加载核心模块 -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/mode-directed.js"></script>
+</body>
+</html>

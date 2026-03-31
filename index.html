@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多AI协作头脑风暴系统</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="home-container">
+        <header class="home-header">
+            <h1>多AI协作头脑风暴</h1>
+            <p>选择一种协作模式，让多个AI专家为你提供多角度的思考和建议</p>
+        </header>
+
+        <div class="mode-cards">
+            <a href="simultaneous.html" class="mode-card">
+                <div class="mode-card-icon">⚡</div>
+                <h3>同步思考模式</h3>
+                <p>所有AI同时接收问题并独立思考，各自给出完整的回答。适合快速收集多方观点，各AI之间互不干扰。</p>
+                <div class="mode-card-arrow">→</div>
+            </a>
+
+            <a href="sequential.html" class="mode-card">
+                <div class="mode-card-icon">🔄</div>
+                <h3>轮流接力模式</h3>
+                <p>AI按顺序依次回答，后一个AI可以看到前面所有AI的回复。适合深度讨论，让AI在他人观点基础上继续推演。</p>
+                <div class="mode-card-arrow">→</div>
+            </a>
+
+            <a href="directed.html" class="mode-card">
+                <div class="mode-card-icon">@</div>
+                <h3>指定@回答模式</h3>
+                <p>使用 @AI名称 指定特定AI回答，AI回复中也可以@其他AI触发连锁反应。适合精准控制和引导讨论方向。</p>
+                <div class="mode-card-arrow">→</div>
+            </a>
+        </div>
+
+        <div style="text-align: center; color: #999; font-size: 14px;">
+            <p>💡 提示：首次使用前，请在任意模式的左侧配置面板中设置API密钥</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script>
+        // 页面加载时初始化配置
+        document.addEventListener('DOMContentLoaded', () => {
+            window.ConfigModule.loadConfig();
+        });
+    </script>
+</body>
+</html>
