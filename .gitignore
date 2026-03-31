@@ -7,7 +7,7 @@
 ehthumbs.db
 Thumbs.db
 
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
@@ -29,6 +29,9 @@ npm-debug.log*
 *.temp
 .cache/
 
-# Backup files
-*.bak
-*.backup
+# Node modules (if added later)
+node_modules/
+
+# Build output (if added later)
+dist/
+build/
