@@ -4,6 +4,8 @@ BSA 是一个基于纯前端技术实现的多 AI 协作头脑风暴系统。在
 
 本项目无需任何后端服务器，直接通过浏览器调用兼容 OpenAI 格式的 API 即可运行，轻量、便捷且高度可定制。
 
+[![Let's Try](https://img.shields.io/badge/Let's_Try-Live_Preview-007FFF?style=for-the-badge&logo=rocket&logoColor=white)](https://ks-c.github.io/BSA/index.html)
+
 ## ✨ 核心特性
 
 - 🧑‍🤝‍🧑 **多 AI 协作**：支持设置多个 AI 角色，每个角色拥有独立的 API Key、模型名称和 System Prompt。
