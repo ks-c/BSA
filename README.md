@@ -41,6 +41,7 @@ BSA/
     ├── mode-simultaneous.js# 同步思考模式逻辑
     ├── mode-sequential.js  # 轮流接力模式逻辑
     └── mode-directed.js    # 指定 @ 模式逻辑
+```
 
 ## 🚀 快速上手
 
